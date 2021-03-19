@@ -13,4 +13,4 @@ connect = mysql_connect()
 
 # Save the table in mysql database
 
-save_to_mysql(db_connect=connect,df_to_save=dfk,df_name='food_data')
+save_to_mysql(db_connect=connect,df_to_save=df,df_name='food_data')
