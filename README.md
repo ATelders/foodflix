@@ -1,5 +1,7 @@
 # foodflix
 
+Presentation slides are in 'ProjetFoodFlix.pdf'
+
 The original data is in the 'data/01_raw' folder
 
 Once cleaned, it goes into the 'data/02_intermediate' folder
@@ -16,7 +18,7 @@ In the 'src/d00_utils' folder, there is one file 'mysql_utils.py'
     not to use them because I couldn't load the original data because of its size. This has something to do with the InnoDB engine.
 
 In the 'src/d01_data' folder, there is the 'load_data.py', which is not used for the reason explained just above.
-The 'clean_data.py' runs the same commands that the cleaning notebook, and saves the results in 'data/02_intermediate/intermediate.csv'
+The '2021-03-21-at-data-cleaning.py' runs the same commands that the cleaning notebook, and saves the results in 'data/02_intermediate/intermediate.csv'
 The 'profiling.py' creates a html report with the raw data and saves it in 'results'
 
 In the 'src/d02_intermediate' folder, the 'profiling.py' creates a html report with the cleaned data and saves it in 'results'.
