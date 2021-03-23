@@ -3,6 +3,9 @@ import mysql.connector
 
 
 def mysql_connect():
+    '''
+    Creates the connection to MySQL with the username and password which are stored in conf/ folder.
+    '''
     from conf.conf import mysql_pseudo, mysql_mdp
     mysql_username = mysql_pseudo
     mysql_password = mysql_mdp
@@ -11,4 +14,7 @@ def mysql_connect():
     return database_connection
 
 def save_to_mysql(db_connect,df_to_save,df_name):
+    '''
+    Saves the dataframe to MySQL
+    '''
     df_to_save.to_sql(con=db_connect, name=df_name, if_exists='replace')
