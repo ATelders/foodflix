@@ -1,10 +1,13 @@
+# This code summarizes the cleaning code that is in the notebook 2021-03-21-at-data-cleaning.ipynb
+
 import pandas as pd
 
 print("Setup Complete")
 
-# After dowloading csv files, I read it with pandas
+# After dowloading tsv file, I read it with pandas
 df = pd.read_csv(r"/home/apprenant/simplon_projects/foodflix/data/01_raw/en.openfoodfacts.org.products.tsv", sep='\t')
 
+# This Series 
 percent_of_nans = df.isnull().sum() / df.shape[0] * 100
 
 useless_features = percent_of_nans[percent_of_nans > 98].index

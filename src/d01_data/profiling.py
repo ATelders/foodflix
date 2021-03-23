@@ -9,4 +9,4 @@ df = pd.read_csv(file_path, sep='\t')
 df_sample = df.sample(n=10000, random_state=1)
 profile = ProfileReport(df_sample, title='Pandas Profiling Report')
 
-profile.to_file("your_report.html")
+profile.to_file("results/profiling_raw.html")
